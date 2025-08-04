@@ -12,4 +12,4 @@ docker run -it \
     --user "nvidia:nvidia" \
     --env="DISPLAY=$DISPLAY" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-    jetpack-sdk /bin/bash
+    jetpack-sdk /flash_tx2_oc.sh
