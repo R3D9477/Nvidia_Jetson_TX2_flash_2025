@@ -1,2 +1,3 @@
 *.deb
-nvidia
+nvidia/*
+!nvidia/.gitkeep
