@@ -5,7 +5,7 @@ RUN passwd --delete root
 
 RUN apt update
 RUN apt upgrade -y
-RUN apt install gnupg sudo binutils -y
+RUN apt install gnupg sudo -y
 
 RUN groupadd nvidia
 RUN mkdir -p /home/nvidia
