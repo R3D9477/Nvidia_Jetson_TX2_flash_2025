@@ -5,7 +5,13 @@ RUN passwd --delete root
 
 RUN apt update
 RUN apt upgrade -y
-RUN apt install gnupg sudo -y
+RUN apt install -y gnupg sudo
+
+# for tx2_oc flasher
+RUN apt install -y qemu-user-static wget usbutils python python3 cpio binutils
+
+# for nsight ncu-ui
+RUN apt install -y g++ gcc make python2.7 pkg-config libx11-dev libxkbfile-dev libsecret-1-dev
 
 RUN groupadd nvidia
 RUN mkdir -p /home/nvidia

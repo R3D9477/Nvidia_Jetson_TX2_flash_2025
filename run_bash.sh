@@ -4,8 +4,6 @@ NVIDIA_FOLDER="$(realpath $(dirname $0)/nvidia)"
 
 xhost +local:$USER
 
-#docker container prune
-
 docker run -it \
     --privileged -v /dev/bus/usb:/dev/bus/usb/ -v /dev:/dev --network host \
     --volume="$NVIDIA_FOLDER:/home/nvidia" \

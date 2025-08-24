@@ -2,8 +2,6 @@
 
 NVIDIA_FOLDER="$HOME/nvidia"
 
-sudo apt install qemu-user-static wget usbutils python python3 cpio binutils -y
-
 echo ""
 echo "   *** NVIDIA Jetson Device ***"
 echo "   * `lsusb -d 0955:7c18`"

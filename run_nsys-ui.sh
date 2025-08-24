@@ -10,4 +10,4 @@ docker run -it \
     --user "nvidia:nvidia" \
     --env="DISPLAY=$DISPLAY" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-    jetpack-sdk /opt/nvidia/sdkmanager/sdkmanager-gui
+    jetpack-sdk /opt/nvidia/nsight-systems/2024.2.2/bin/nsys-ui
