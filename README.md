@@ -20,16 +20,15 @@
 5. run GUI Profiler on host side `./run_nsys-ui.sh`
 
 #### install Jetson SDK Components:
-* on Jetson TX2:
-  * to add needed repos, run:
+* to add needed repos, run on Jetson TX2:
 ```
 cat <<EOT >> /etc/apt/sources.list.d/nvidia-l4t-apt-source.list
 deb https://repo.download.nvidia.com/jetson/common r32.7 main
 deb https://repo.download.nvidia.com/jetson/t186 r32.7 main
 EOT
 ```
-  * it install jetpack, run `sudo apt update && sudo apt install nvidia-jetpack`
-  * to fix issue [ERR_NVGPUCTRPERM](https://developer.nvidia.com/nvidia-development-tools-solutions-err_nvgpuctrperm-permission-issue-performance-counters), run:
+* to install jetpack, run on Jetson TX2 `sudo apt update && sudo apt install nvidia-jetpack`
+* to fix issue [ERR_NVGPUCTRPERM](https://developer.nvidia.com/nvidia-development-tools-solutions-err_nvgpuctrperm-permission-issue-performance-counters), run on Jetson TX2:
 ```
 cat <<EOT >> /usr/bin/nvprof
 #!/bin/bash
@@ -37,4 +36,4 @@ sudo `whereis nvprof | awk '{print $3}'` $@
 EOT
 ```
   then run `sudo chmod +x /usr/bin/nvprof`
-* to fix issue with [cuda-gdb initialization](https://forums.developer.nvidia.com/t/unable-to-debug-simple-cuda-program-cudbg-error-initialization-failure/222599/4?u=kr.eugene12), run `sudo chmod a+rw /dev/nvhost-dbg-gpu`
+* to fix issue with [cuda-gdb initialization](https://forums.developer.nvidia.com/t/unable-to-debug-simple-cuda-program-cudbg-error-initialization-failure/222599/4?u=kr.eugene12), run on Jetson TX2 `sudo chmod a+rw /dev/nvhost-dbg-gpu`
