@@ -1,4 +1,4 @@
-#### Flash Nvidia Jetson TX2 + Orbitty Carrier '25
+### Flash Nvidia Jetson TX2 + Orbitty Carrier '25
 
 1. on host download Nvidia SDK manager (.deb) and save to this folder with name `sdkmanager.deb`
 2. on host run `./1_build.sh`
@@ -19,7 +19,7 @@
   * 4.4. wait until process will be done.
 5. run GUI Profiler on host side `./run_nsys-ui.sh`
 
-#### install Jetson SDK Components:
+### install Jetson SDK Components:
 * to add needed repos, run on Jetson TX2:
 ```
 cat <<EOT >> /etc/apt/sources.list.d/nvidia-l4t-apt-source.list
